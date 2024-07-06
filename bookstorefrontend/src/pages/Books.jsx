@@ -106,10 +106,12 @@ function Books() {
                   key={product.id}
                   className="product flex flex-col items-center gap-5"
                 >
-                  <img src={product.image} alt="" className="w-full h-auto" />
-                  <h2 className="text-sm lg:text-xl  font-semibold">
-                    {product.name}
-                  </h2>
+                  <Link to={`/book/${product.id}`}>
+                    <img src={product.image} alt="" className="w-full h-auto" />
+                    <h2 className="text-sm lg:text-[17px] font-semibold text-center">
+                      {product.name}
+                    </h2>
+                  </Link>
                   <button
                     className="bg-[#946659] text-white px-6 py-3 text-sm rounded-md"
                     onClick={() => handleAddtoCart(product)}
@@ -120,13 +122,6 @@ function Books() {
               ))}
             </div>
           </div>
-          {buttonerror && (
-            <Link to="/SignIn">
-              <button className="bg-[#946659] font-bold text-white px-4 py-2 rounded-md ">
-                Sign In
-              </button>
-            </Link>
-          )}
         </div>
       </div>
       <div className="buy-series my-[200px]">

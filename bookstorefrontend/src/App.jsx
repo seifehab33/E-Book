@@ -8,6 +8,7 @@ import Cart from "./pages/Cart";
 import SignIn from "./pages/SignIn";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import BookDetails from "./pages/Bookdetails";
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -21,6 +22,7 @@ function App() {
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/book/:id" element={<BookDetails />} />
           </Routes>
         </div>
         <Footer />
